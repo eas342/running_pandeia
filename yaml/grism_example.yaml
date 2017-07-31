@@ -13,7 +13,7 @@ calculation:
 configuration: 
    detector:
       nexp: 1
-      ngroup: 2
+      ngroup: 4
       nint: 1782.0
       readmode: rapid
       subarray: subgrism256
@@ -32,12 +32,15 @@ scene:
       spectrum: 
          lines: []
          normalization: 
-            type: none
+            type: photsys
+            norm_flux: 6.7505
+            norm_fluxunit: vegamag
+            bandpass: johnson,j
          sed: 
-            sed_type: input
-            spectrum: 
-               - [0.7,1.7,2.7,3.7,4.7,5.7]
-               - [1.0,1.0,1.0,1.0,1.0,1.0]
+            sed_type: "phoenix"
+            teff: 5500
+            log_g: 4.5
+            metallicity: 0.0
       target: True
 strategy:
    aperture_size: 0.7
