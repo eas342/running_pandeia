@@ -77,8 +77,6 @@ def check_gto_wellFracs():
         pdGrism['configuration']['detector']['subarray'] = str(oneObs['Subarray']).lower()
         pdGrism['configuration']['detector']['readmode'] = str(oneObs['Read Mode']).lower()
         pd2 = pdFromDict(pdGrism)
-        pdb.set_trace()
         outWell.append(np.max(pd2.get_well_depth_image()))
     inList['Well Frac'] = outWell
     inList.write('output/gto_wells.csv',overwrite=True)
-    
