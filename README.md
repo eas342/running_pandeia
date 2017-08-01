@@ -22,7 +22,7 @@ There doesn't seem to be a special parameter for the number of amplifier output 
  - `subgrism256`
  - `subgrism128`
  - `subgrism128 (noutputs=1)`
- - `sub64p`
+ - `subgrism64`
  - `subgrism64 (noutputs=1)`
 
 ## Exposure Specification
