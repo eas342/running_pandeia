@@ -73,10 +73,12 @@ def check_gto_wellFracs():
         pdGrism['scene'][0]['spectrum']['sed']['teff'] = float(oneObs['Teff'])
         pdGrism['scene'][0]['spectrum']['sed']['log_g'] = float(oneObs['Logg'])
         pdGrism['scene'][0]['spectrum']['sed']['metallicity'] = float(oneObs['Metallicity'])
+        pdGrism['configuration']['instrument']['filter'] = str(oneObs['Filter']).lower()
         pdGrism['configuration']['detector']['ngroup'] = int(oneObs['Ngroups'])
         pdGrism['configuration']['detector']['subarray'] = str(oneObs['Subarray']).lower()
         pdGrism['configuration']['detector']['readmode'] = str(oneObs['Read Mode']).lower()
         pd2 = pdFromDict(pdGrism)
-        outWell.append(np.max(pd2.get_well_depth_image()))
+        maxWell = np.max(pd2.get_well_depth_image())
+        outWell.append(maxWell)
     inList['Well Frac'] = outWell
     inList.write('output/gto_wells.csv',overwrite=True)
