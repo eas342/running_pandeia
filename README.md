@@ -41,3 +41,9 @@ The last command will show the available subarrays. One can check the exposure a
 
 	exp1 = inst.get_exposure_pars()
 	exp1.tframe
+
+## Saturation
+The saturation map is viewable from Pandeia wiht
+
+	result = peform_calculation(parameters)
+	np.max(result['2d']['saturation'])

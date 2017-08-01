@@ -1,0 +1,12 @@
+Target,Teff,Metallicity,Logg,Kmag,Norm Bandpass,Filter,Ngroups,Subarray,Read Mode,Notes
+HD 189733,5040,-0.03,4.587,5.541,"johnson,k",f444w,7,subgrism64,RAPID,Not really Johnson K but that's what Pandeia uses
+WASP 80,4145,-0.14,4.6,8.351,"johnson,k",f322w2,6,subgrism256,BRIGHT1,Not really Johnson K but that's what Pandeia uses
+WASP 80,4145,-0.14,4.6,8.351,"johnson,k",f444w,12,subgrism256,BRIGHT1,Not really Johnson K but that's what Pandeia uses
+HAT-P-19,4990,0.23,4.54,10.546,"johnson,k",f322w2,11,subgrism256 (noutputs=1),BRIGHT1,Not really Johnson K but that's what Pandeia uses
+HAT-P-19,4990,0.23,4.54,10.546,"johnson,k",f444w,24,subgrism256 (noutputs=1),BRIGHT1,Not really Johnson K but that's what Pandeia uses
+WASP-107,4430,0.02,4.5,8.6,"johnson,k",f322w2,7,subgrism256,BRIGHT1,Not really Johnson K but that's what Pandeia uses
+WASP-107,4430,0.02,4.5,8.6,"johnson,k",f444w,16,subgrism256,BRIGHT1,Not really Johnson K but that's what Pandeia uses
+GJ 436,3350,0.0,4.843,6.073,"johnson,k",f322w2,5,subgrism64,BRIGHT1,Not really Johnson K but that's what Pandeia uses
+GJ 436,3350,0.0,4.843,6.073,"johnson,k",f444w,10,subgrism64,BRIGHT1,Not really Johnson K but that's what Pandeia uses
+HAT-P-26,5079,-0.04,4.56,9.581,"johnson,k",f322w2,9,subgrism256 (noutputs=1),RAPID,Not really Johnson K but that's what Pandeia uses
+HAT-P-26,5079,-0.04,4.56,9.581,"johnson,k",f444w,29,subgrism256 (noutputs=1),RAPID,Not really Johnson K but that's what Pandeia uses
