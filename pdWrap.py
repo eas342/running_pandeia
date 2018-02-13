@@ -28,7 +28,7 @@ class pdWrap():
     
     def get_well_depth_image(self):
         """ Get a well depth image """
-        rampTime = self.result['information']['exposure_specification']['tramp']
+        rampTime = self.result['information']['exposure_specification']['saturation_time']
         wellFrac = rampTime * self.result['2d']['detector'] / self.fullWell
         
         return wellFrac
