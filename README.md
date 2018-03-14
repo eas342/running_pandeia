@@ -17,9 +17,27 @@ with the path to the reference data.
 Edit a file such as <a href="yaml/default_nc_lw_imaging.yaml">`yaml/default_nc_lw_imaging.yaml`</a>. Note that you can download the data from an ETC run online and use this as a start for future runs.
 
 ## Running
+Simple run:
 
 	python pandeia_sat_sens.py 
 
+
+## Custom run
+
+	import pdWrap
+	pd = pdWrap.pdWrap('yaml/brown_dwarf_lrs.yaml')
+	
+# Plotting Results
+There are some useful convenience functions for plotting results.
+
+### Plot the well depth
+Use the `pdWrap` object created by `pdWrap.pdWrap()`
+
+	pd.plot_well_depth()
+
+### Plot the Signal to Noise
+
+	pd.plot_snr()
 
 # Notes on Pandeia's Python API
 
