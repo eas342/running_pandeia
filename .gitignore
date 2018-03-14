@@ -2,3 +2,4 @@
 saturation_scratchwork.py
 excel/*.xlsx
 output/*.csv
+cache*

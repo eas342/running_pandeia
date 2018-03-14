@@ -10,6 +10,10 @@ import glob
 from astropy.io import ascii
 from astropy.table import Table
 import numpy as np
+from joblib import Memory
+
+memory = Memory(cachedir='cache')
+pandeiaCalc = memory.cache(perform_calculation)
 
 class pdWrap():
     """ A class that wraps Pandeia and lets me do my own scripts and calcs """
@@ -24,7 +28,7 @@ class pdWrap():
         self.det_pars = instrument.get_detector_pars()
         self.fullWell = self.det_pars['fullwell']
         
-        self.result = perform_calculation(self.pandeia_params)
+        self.result = pandeiaCalc(self.pandeia_params)
     
     def get_well_depth_image(self):
         """ Get a well depth image """
@@ -45,6 +49,15 @@ class pdWrap():
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.05)
         fig.colorbar(imMap,label='Well Fraction',cax=cax)
+        fig.show()
+        
+    def plot_snr(self):
+        """ Plots the signal to noise of a spectrum """
+        fig, ax = plt.subplots()
+        wave, snr = self.result['1d']['sn']
+        ax.plot(wave,snr)
+        ax.set_xlabel('Wavelength ($\mu$m)')
+        ax.set_ylabel('SNR')
         fig.show()
 
 class pdFromDict(pdWrap):
