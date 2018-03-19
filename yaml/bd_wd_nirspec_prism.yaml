@@ -1,0 +1,63 @@
+background: medium
+calculation:
+   effects: 
+      background: True
+      ipc: True
+      saturation: True
+   noise: 
+      crs: True
+      darkcurrent: True
+      ffnoise: False
+      readnoise: True
+      rn_correlation: True
+configuration:
+  detector:
+    nexp: 1
+    ngroup: 280
+    nint: 1
+    readmode: nrs
+    subarray: sub512
+  instrument:
+    aperture: s1600a1
+    disperser: prism
+    filter: clear
+    instrument: nirspec
+    mode: fixed_slit
+scene:
+- id: 1
+  position:
+    orientation: 0.0
+    x_offset: 0.0
+    y_offset: 0.0
+  shape:
+    geometry: point
+  spectrum:
+    extinction:
+      bandpass: j
+      law: mw_rv_31
+      unit: mag
+      value: 0
+    lines: []
+    normalization:
+      bandpass: johnson,k
+      norm_flux: 17
+      norm_fluxunit: vegamag
+      type: photsys
+    redshift: 0
+    sed:
+      key: m5v
+      sed_type: phoenix
+strategy:
+  aperture_size: 0.15
+  background_subtraction: true
+  method: specapphot
+  reference_wavelength: 2.95
+  sky_annulus:
+  - 0.2
+  - 0.5
+  target_source: '1'
+  target_type: coords
+  target_xy:
+  - 0
+  - 0
+  units: arcsec
