@@ -59,6 +59,11 @@ class pdWrap():
         ax.set_xlabel('Wavelength ($\mu$m)')
         ax.set_ylabel('SNR')
         fig.show()
+    
+    def max_well(self):
+        """ Print the maximum well depth """
+        maxVal = np.max(self.get_well_depth_image())
+        return maxVal
 
 class pdFromDict(pdWrap):
     def __init__(self,paramDict):

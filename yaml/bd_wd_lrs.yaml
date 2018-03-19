@@ -1,0 +1,53 @@
+background: medium
+calculation:
+   effects: 
+      background: True
+      ipc: True
+      saturation: True
+   noise: 
+      crs: True
+      darkcurrent: True
+      ffnoise: False
+      readnoise: True
+      rn_correlation: True
+configuration: 
+   detector:
+      nexp: 1
+      ngroup: 2000
+      nint: 10
+      readmode: slow ## usually we want 'fast' but for this fainter object, it's slow
+      subarray: slitlessprism
+   instrument: 
+      aperture: imager
+      disperser: p750l
+      filter: null
+      instrument: miri
+      mode: lrsslitless
+scene:
+   -  id: 1
+      position: 
+         ang_unit: arcsec
+         xoff: 0.0
+         yoff: 0.0
+      spectrum: 
+         lines: []
+         normalization: 
+            type: photsys
+            norm_flux: 17.0
+            norm_fluxunit: vegamag
+            bandpass: johnson,k
+         sed: 
+            sed_type: "phoenix"
+            teff: 1300
+            log_g: 4.5
+            metallicity: 0.0
+      target: True
+strategy:
+   aperture_size: 0.7
+   background_subtraction: True
+   method: specapphot
+   reference_wavelength: null
+   sky_annulus: [0.8, 1.6]
+   target_xy: [0.0, 0.0]
+   units: arcsec
+telescope: jwst
