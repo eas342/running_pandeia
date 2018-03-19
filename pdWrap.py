@@ -2,7 +2,7 @@ from pandeia.engine.perform_calculation import perform_calculation
 from pandeia.engine.instrument_factory import InstrumentFactory
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
-import yaml
+import yaml, json
 import pdb
 import os
 import pandas
@@ -77,6 +77,25 @@ class pdWrap():
         ax.legend()
         
         fig.show()
+
+def yaml_from_json(infile,outfile,simplifyBackg=True):
+    """ Create an easier-to-read YAMl file from a JSON one
+    Parameters
+    ----------------
+    infile: str
+        Input JSON file
+    outfile: str
+        Output YAML file
+    simplifyBackg: bool
+        Simplify the background keyword?
+    """
+    ## Actually using YAML to load is cleaner
+    inputDict = yaml.load(open(infile))
+    
+    if simplifyBackg == True:
+        inputDict['background'] = 'medium'
+    
+    yaml.dump(inputDict,open(outfile,'w'),default_flow_style=False)
 
 class pdFromDict(pdWrap):
     def __init__(self,paramDict):

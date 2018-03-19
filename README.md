@@ -45,6 +45,12 @@ Also, you can simply get the maximum well depth with `pd.max_well()`.
 
 	pdBD.relative_src_bg()
 
+# Convenience Functions
+This function makes a YAML file from the JSON, so it's a little easier to read. Also, for easier reading, it replaces the manual background with 'medium'.
+
+	pdWrap.yaml_from_json('json/bd_wd_online.json','yaml/new_yaml.yaml')	
+	
+
 # Notes on Pandeia's Python API
 
 ## Exposure Specification
