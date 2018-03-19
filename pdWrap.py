@@ -64,6 +64,19 @@ class pdWrap():
         """ Print the maximum well depth """
         maxVal = np.max(self.get_well_depth_image())
         return maxVal
+        
+    def relative_src_bg(self):
+        """ Plots the relative source & Background """
+        fig, ax = plt.subplots()
+        
+        for oneF in ['extracted_flux','extracted_bg_only']:
+            wave, f = self.result['1d'][oneF]
+            ax.plot(wave,f,label=oneF)
+        ax.set_xlabel('Wavelength ($\mu$m)')
+        ax.set_ylabel('Extracted Flux')
+        ax.legend()
+        
+        fig.show()
 
 class pdFromDict(pdWrap):
     def __init__(self,paramDict):

@@ -35,9 +35,15 @@ Use the `pdWrap` object created by `pdWrap.pdWrap()`
 
 	pd.plot_well_depth()
 
+Also, you can simply get the maximum well depth with `pd.max_well()`.
+
 ### Plot the Signal to Noise
 
 	pd.plot_snr()
+
+### Plot the relative source & background within the aperture
+
+	pdBD.relative_src_bg()
 
 # Notes on Pandeia's Python API
 
