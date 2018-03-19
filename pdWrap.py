@@ -77,6 +77,13 @@ class pdWrap():
         ax.legend()
         
         fig.show()
+        
+    def print_warnings(self):
+        """ Print the warnings """
+        for oneItem in self.result['warnings']:
+            print(oneItem)
+            print(self.result['warnings'][oneItem])
+            print('\n')
 
 def yaml_from_json(infile,outfile,simplifyBackg=True):
     """ Create an easier-to-read YAMl file from a JSON one
