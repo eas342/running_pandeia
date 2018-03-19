@@ -15,7 +15,7 @@ configuration:
       nexp: 1
       ngroup: 2000
       nint: 10
-      readmode: slow ## usually we want 'fast' but for this fainter object, it's slow
+      readmode: fast
       subarray: slitlessprism
    instrument: 
       aperture: imager
