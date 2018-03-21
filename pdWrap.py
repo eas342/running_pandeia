@@ -51,7 +51,7 @@ class pdWrap():
         fig.colorbar(imMap,label='Well Fraction',cax=cax)
         fig.show()
         
-    def plot_snr(self):
+    def plot_snr(self,bin=None):
         """ Plots the signal to noise of a spectrum """
         fig, ax = plt.subplots()
         wave, snr = self.result['1d']['sn']
