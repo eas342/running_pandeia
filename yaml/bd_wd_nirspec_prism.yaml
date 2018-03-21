@@ -14,7 +14,7 @@ configuration:
   detector:
     nexp: 1
     ngroup: 280
-    nint: 1
+    nint: 14
     readmode: nrs
     subarray: sub512
   instrument:
