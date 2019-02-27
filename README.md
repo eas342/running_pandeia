@@ -9,7 +9,7 @@ See <a href="https://pypi.python.org/pypi/pandeia.engine">https://pypi.python.or
 
 Edit your `.bash_profile` to reflect the latest reference data. For example:
 
-	export pandeia_refdata="/jwst_stuff/pandeia_data-1.2"
+	export pandeia_refdata="/jwst_stuff/pandeia_data-1.3"
 with the path to the reference data.
 
 ## YAML FILES
@@ -19,7 +19,8 @@ Edit a file such as <a href="yaml/default_nc_lw_imaging.yaml">`yaml/default_nc_l
 ## Running
 Simple run:
 
-	python pandeia_sat_sens.py 
+	import pdWrap
+	pd = pdWrap.pdWrap()
 
 
 ## Custom run
@@ -43,7 +44,7 @@ Also, you can simply get the maximum well depth with `pd.max_well()`.
 
 ### Plot the relative source & background within the aperture
 
-	pdBD.relative_src_bg()
+	pd.relative_src_bg()
 
 # Convenience Functions
 This function makes a YAML file from the JSON, so it's a little easier to read. Also, for easier reading, it replaces the manual background with 'medium'.
